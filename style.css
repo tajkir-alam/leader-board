@@ -134,11 +134,75 @@ header{
     color: #9F9F9F; 
 }
 
+/* ---------------------
+    Course Section
+--------------------- */
+.lates-course{
+    margin-top: 50px;
+}
+.lates-course .course-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.course-content{
+    box-shadow: 0px 0px 0.9px 0.3px black;
+    padding: 2px 2px 30px 3px;
+    border-radius: 15px;
+}
+.course-container .course-content > img{
+    width: 100%;
+    height: 110px;
+}
+.course-container .course-content .course-title{
+    font-weight: 500;
+    font-size: 20px;
+    width: 100%;
+}
+.course-container .course-content .course-author{
+    font-size: 14px;
+    font-weight: 400; 
+    color: #ED6B4F;
+}
+.course-content .course-info{
+    display: flex;
+    justify-content: space-between;
+}
+.course-content .course-info .course-review{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.course-content .course-info .course-review .review-icons > i{
+    font-size: 12px;
+    color: #FFC014;
+}
+.course-content .course-info .course-review .review-icons .secondary-icon{
+    font-size: 12px;
+    color: #AEAEAE;
+}
+.course-content .course-info .course-review .review-score{
+    font-size: 14px;
+    font-weight: 400;
+    color: #A2A2A2;
+}
+.course-content .course-info .course-duration{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FF4A60;
+    background: #9F9F9F;
+    border-radius: 15px;
+}
+
 
 
 
 /* --------------------
-    Resoinsive Design
+    Responsive Design
 -------------------- */
 
 /* Media Query < 576px */
@@ -163,5 +227,9 @@ header{
     }
     .blog-container .blog-content{
         flex-direction: column;
+    }
+
+    .lates-course .course-container{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
