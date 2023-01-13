@@ -45,6 +45,7 @@ header{
 .header{
     display: flex;
     justify-content: space-between;
+    column-gap: 10px;
 }
 .header .left-header{
     display: flex;
@@ -76,6 +77,10 @@ header{
     color: white;
     text-decoration: none;
     font-weight: 400;
+}
+.right-header > img{
+    max-width: 50px;
+    max-height: 50px;
 }
 
 
@@ -126,5 +131,37 @@ header{
     color: #562EFF;
 }
 .blog-content .blog-details .secondary-text{
-    color: #9F9F9F;
+    color: #9F9F9F; 
+}
+
+
+
+
+/* --------------------
+    Resoinsive Design
+-------------------- */
+
+/* Media Query < 576px */
+@media screen and (max-width: 576px) {
+    .left-header > img{
+        width: 30px;
+        height: 40px;
+    }
+    .header .right-header{
+        flex-direction: column-reverse;
+    }
+    .right-header ul{
+        flex-direction: column;
+    }
+
+
+    .top-player-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog-container .blog-content{
+        flex-direction: column;
+    }
 }
